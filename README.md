@@ -15,4 +15,4 @@ Three frameworks enable React Native rendering:
 1. Open `RNProjectHost.xcodeproj` in Xcode
 2. Build and run (⌘R)
 
-The app initializes React Native on launch and displays the RNProject module as root view controller.
+The `AppDelegate.swift` contains the initialization code that starts React Native and displays the RNProject module as root view controller.
