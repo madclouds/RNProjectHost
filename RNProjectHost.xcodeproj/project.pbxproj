@@ -6,6 +6,19 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXCopyFilesBuildPhase section */
+		2267789D2EC7D16400C29C8D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		226778712EC7BB5600C29C8D /* RNProjectHost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RNProjectHost.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -20,11 +33,29 @@
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		2267789E2EC7D16400C29C8D /* Exceptions for "RNProjectHost" folder in "Embed Frameworks" phase from "RNProjectHost" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			attributesByRelativePath = {
+				RNProjectReact.xcframework = (CodeSignOnCopy, RemoveHeadersOnCopy, );
+				ReactBrownfield.xcframework = (CodeSignOnCopy, RemoveHeadersOnCopy, );
+				hermes.xcframework = (CodeSignOnCopy, RemoveHeadersOnCopy, );
+			};
+			buildPhase = 2267789D2EC7D16400C29C8D /* Embed Frameworks */;
+			membershipExceptions = (
+				hermes.xcframework,
+				ReactBrownfield.xcframework,
+				RNProjectReact.xcframework,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		226778732EC7BB5600C29C8D /* RNProjectHost */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				226778832EC7BB5700C29C8D /* Exceptions for "RNProjectHost" folder in "RNProjectHost" target */,
+				2267789E2EC7D16400C29C8D /* Exceptions for "RNProjectHost" folder in "Embed Frameworks" phase from "RNProjectHost" target */,
 			);
 			path = RNProjectHost;
 			sourceTree = "<group>";
@@ -68,6 +99,7 @@
 				2267786D2EC7BB5600C29C8D /* Sources */,
 				2267786E2EC7BB5600C29C8D /* Frameworks */,
 				2267786F2EC7BB5600C29C8D /* Resources */,
+				2267789D2EC7D16400C29C8D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -150,7 +182,6 @@
 				INFOPLIST_FILE = RNProjectHost/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -182,7 +213,6 @@
 				INFOPLIST_FILE = RNProjectHost/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

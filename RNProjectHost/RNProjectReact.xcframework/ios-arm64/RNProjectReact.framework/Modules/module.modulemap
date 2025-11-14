@@ -1,0 +1,6 @@
+framework module RNProjectReact {
+  umbrella header "RNProjectReact.h"
+  export *
+
+  module * { export * }
+}

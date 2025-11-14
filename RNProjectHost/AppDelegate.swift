@@ -6,31 +6,31 @@
 //
 
 import UIKit
+import RNProjectReact
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
-
+    var window: UIWindow?
+    
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        // Initialize React Native
+        ReactNativeBrownfield.shared.bundle = ReactNativeBundle
+        ReactNativeBrownfield.shared.startReactNative(onBundleLoaded: {
+            print("React Native bundle loaded")
+        }, launchOptions: launchOptions)
+        
+        // Add `window` property required by React Native
+        window = UIWindow(frame: UIScreen.main.bounds)
+        
+        // Create VC that calls your module by name registered by `AppRegistry.registerComponent` of your React Native app
+        let reactNativeVC = ReactNativeViewController(moduleName: "RNProject")
+        
+        // Display the view as full window or anyhow you need
+        window?.rootViewController = reactNativeVC
+        window?.makeKeyAndVisible()
         return true
     }
-
-    // MARK: UISceneSession Lifecycle
-
-    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        // Called when a new scene session is being created.
-        // Use this method to select a configuration to create the new scene with.
-        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
-    }
-
-    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-        // Called when the user discards a scene session.
-        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
-    }
-
-
+    
 }
 
